@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Unit Converter Vuejs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="banner">
+        <h1>Hello, welcome to my Vuejs Miniproject</h1>
+    </div>
+
+    <div id="footer">
+        LALLIER Julien | ALL RIGHTS RESERVED
+        
+    </div>
+
+    <div class="converter-body">
+
+        <h1 class="converter-title">Lenght Converter</h1>
+
+        <input type="text" placeholder="Input" id="input">
+        <span>=</span>
+        <input type="text" placeholder="Result" id="result">
+
+
+        <select id="inputType">
+            <option value="terameter">Terameter</option>
+            <option value="gigameter">Gigameter</option>
+            <option value="megameter">Megameter</option>
+            <option value="kilometer">Kilometer</option>
+            <option value="hectometer">Hectometer</option>
+            <option value="decameter">Decaometer</option>
+            <option value="meter">Meter</option>
+            <option value="decimeter">decimeter</option>
+            <option value="centimeter">Centimeter</option>
+            <option value="millimeter">Millimeter</option>
+            <option value="micrometer">Micrometer</option>
+            <option value="nanometer">Nanometer</option>
+            <option value="picometer">Picometer</option>
+            <option value="femtometer">Femtometer</option>
+        </select>
+
+        <select id="resultType">
+            <option value="terameter">Terameter</option>
+            <option value="gigameter">Gigameter</option>
+            <option value="megameter">Megameter</option>
+            <option value="kilometer">Kilometer</option>
+            <option value="hectometer">Hectometer</option>
+            <option value="decameter">Decameter</option>
+            <option value="meter">Meter</option>
+            <option value="decimeter">decimeter</option>
+            <option value="centimeter">Centimeter</option>
+            <option value="millimeter">Millimeter</option>
+            <option value="micrometer">Micrometer</option>
+            <option value="nanometer">Nanometer</option>
+            <option value="picometer">Picometer</option>
+            <option value="femtometer">Femtometer</option>
+        </select>
+    </div>
+
+    <template>
+        <div>
+            <ul>
+                <li v-for="convertionUnit in convertionUnit" : key="convertionUnit">{{ convertionUnit }}</li>
+            </ul>
+            <button @click="addNew()">Add new Convertion Unit</button>
+        </div>
+    </template>
+
+    <script>
+        export default {
+            data() {
+                return { convertionUnit: [] }
+            },
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js%22%3E"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
